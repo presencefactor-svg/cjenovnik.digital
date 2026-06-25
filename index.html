@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="bs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cjenovnik.digital | Premium Digitalni Cjenovnici i Lokalni SEO</title>
+    <!-- Favicon (Moderna SVG ikona usklađena sa bojama brenda) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%2310b981'/%3E%3C/linearGradient%3E%3Crect width='100' height='100' rx='25' fill='url(%23g)'/%3E%3Cpath d='M30 35h40M30 50h40M30 65h25' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        },
+                        darkbg: '#0b0f19',
+                        darkcard: '#161d30',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Tailwind Play CDN effects -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .glow-effect {
+            position: relative;
+        }
+        .glow-effect::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(to bottom right, rgba(99, 102, 241, 0.4), rgba(16, 185, 129, 0.2));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        /* Custom Gradient Text fix to prevent browser clipping inside tight line-height containers */
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Nav -->
+    <header class="fixed top-0 w-full z-50 bg-darkbg/80 backdrop-blur-md border-b border-gray-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-1.5 sm:gap-2">
+                <div class="bg-gradient-to-tr from-brand-600 to-emerald-500 p-1.5 sm:p-2.5 rounded-lg sm:rounded-xl shadow-lg shadow-brand-500/20">
+                    <svg class="w-4 h-4 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+                <span class="text-base sm:text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">cjenovnik<span class="text-brand-500">.digital</span></span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#zasto" class="hover:text-white transition-colors">Zašto digitalni?</a>
+                <a href="#kako" class="hover:text-white transition-colors">Kako funkcioniše</a>
+                <a href="#klijenti" class="hover:text-white transition-colors">Klijenti</a>
+                <a href="#cijene" class="hover:text-white transition-colors">Cjenovnik usluga</a>
+                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+            </nav>
+
+            <div>
+                <a href="#narudzba" class="inline-flex items-center justify-center px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold text-white bg-brand-600 hover:bg-brand-500 active:scale-95 transition duration-150 shadow-lg shadow-brand-500/20 whitespace-nowrap">
+                    Kreirajte odmah
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 overflow-hidden">
+        <!-- Background Gradients -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-brand-600/10 blur-[140px] rounded-full pointer-events-none"></div>
+        <div class="absolute -top-40 right-10 w-72 h-72 bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold uppercase tracking-wider">
+                        <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Kompletna integracija sa Google Business profilom
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-normal sm:leading-snug lg:leading-normal">
+                        Vaš cjenovnik na <br class="hidden sm:inline">
+                        <span class="gradient-text py-2">prvoj stranici Google-a</span>
+                    </h1>
+                    
+                    <p class="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0">
+                        Pretvorite obični papirni ili spori PDF meni u superbrz, SEO-optimizovan digitalni cjenovnik. Pomozite klijentima da vas lakše pronađu, a pretraživačima da indeksiraju svaku vašu uslugu.
+                    </p>
+
+                    <!-- Proof Points Badges -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4 text-xs text-gray-400">
+                        <span class="flex items-center gap-1.5 px-3 py-1 bg-gray-900/50 rounded-lg border border-gray-800">
+                            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Bez mjesečnih pretplata
+                        </span>
+                        <span class="flex items-center gap-1.5 px-3 py-1 bg-gray-900/50 rounded-lg border border-gray-800">
+                            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Izrada za samo 48h
+                        </span>
+                        <span class="flex items-center gap-1.5 px-3 py-1 bg-gray-900/50 rounded-lg border border-gray-800">
+                            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Jednokratno €199
+                        </span>
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#narudzba" class="w-full sm:w-auto text-center px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 shadow-xl shadow-brand-500/20 hover:shadow-brand-500/30 transition duration-150 active:scale-98">
+                            Započnite projekt
+                        </a>
+                        <a href="#kako" class="w-full sm:w-auto text-center px-8 py-4 rounded-xl text-base font-semibold text-gray-300 bg-gray-900 hover:bg-gray-800 border border-gray-800 hover:border-gray-700 transition duration-150">
+                            Saznajte više
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Live Preview Mockup / Interactive UI Element -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -inset-1 bg-gradient-to-tr from-brand-500 to-emerald-500 rounded-[2.5rem] blur-2xl opacity-30"></div>
+                    
+                    <!-- Smartphone frame mockup simulated with Tailwind -->
+                    <div class="relative mx-auto max-w-[280px] sm:max-w-[310px] bg-black p-4 rounded-[2.5rem] border-[6px] border-gray-800 shadow-2xl">
+                        <!-- Camera notch -->
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl z-20 flex items-center justify-around px-4">
+                            <span class="w-2.5 h-2.5 rounded-full bg-gray-900 border border-gray-800"></span>
+                            <span class="w-10 h-1 bg-gray-900 rounded"></span>
+                        </div>
+                        
+                        <!-- Internal screen simulation of a digital pricelist (e.g. rustiqe.online) -->
+                        <div class="bg-gray-950 text-white rounded-[1.8rem] overflow-hidden min-h-[500px] flex flex-col justify-between text-sm">
+                            <div class="relative bg-gradient-to-b from-gray-900 to-gray-950 px-4 pt-8 pb-4 border-b border-gray-800">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs text-gray-400">Pricelist Demo</span>
+                                    <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-semibold">Aktivan</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white tracking-tight">RUSTIQE Restaurant</h4>
+                                <p class="text-xs text-gray-500">Kralja Petra I, Doboj</p>
+                            </div>
+
+                            <!-- Menu Items list in the mockup -->
+                            <div class="p-4 flex-grow space-y-4 overflow-y-auto max-h-[300px]">
+                                <div class="space-y-3">
+                                    <span class="text-[11px] font-bold text-brand-400 uppercase tracking-widest block">Glavna Jela</span>
+                                    
+                                    <div class="flex justify-between items-start gap-2 border-b border-gray-900 pb-2">
+                                        <div>
+                                            <h5 class="font-medium text-xs text-white">Teleći Odrezak Rustiqe</h5>
+                                            <p class="text-[10px] text-gray-500">Mladi krompirići, sos od gljiva, ruzmarin</p>
+                                        </div>
+                                        <span class="font-bold text-xs text-emerald-400">18.50 KM</span>
+                                    </div>
+
+                                    <div class="flex justify-between items-start gap-2 border-b border-gray-900 pb-2">
+                                        <div>
+                                            <h5 class="font-medium text-xs text-white">Domaća Pasta Carbonara</h5>
+                                            <p class="text-[10px] text-gray-500">Pančeta, žumanjak, parmezan, svježi biber</p>
+                                        </div>
+                                        <span class="font-bold text-xs text-emerald-400">12.00 KM</span>
+                                    </div>
+                                    
+                                    <span class="text-[11px] font-bold text-brand-400 uppercase tracking-widest block pt-2">Pića</span>
+                                    
+                                    <div class="flex justify-between items-start gap-2 border-b border-gray-900 pb-2">
+                                        <div>
+                                            <h5 class="font-medium text-xs text-white">Domaći Sok od Maline</h5>
+                                            <p class="text-[10px] text-gray-500">100% prirodni plodovi sa domaćeg uzgoja</p>
+                                        </div>
+                                        <span class="font-bold text-xs text-emerald-400">4.50 KM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer of mockup -->
+                            <div class="bg-gray-900/50 p-3 text-center border-t border-gray-950 text-[10px] text-gray-400">
+                                Pokreće: <span class="text-brand-400 font-bold">cjenovnik.digital</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution (Before/After) -->
+    <section id="zasto" class="py-20 border-t border-gray-900/60 relative bg-darkbg/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Zašto je stara praksa loša za vaš promet?</h2>
+                <p class="text-gray-400 mt-4 text-base">Većina vlasnika kafića, restorana i salona na svoj Google profil okači mutnu sliku cjenovnika ili komplikovan PDF. Evo zašto gubite klijente.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- Bad Practice Card -->
+                <div class="bg-gray-900/30 rounded-2xl border border-red-500/10 p-8 flex flex-col justify-between hover:border-red-500/20 transition-all duration-300">
+                    <div>
+                        <div class="bg-red-500/10 p-3 rounded-xl w-fit text-red-400 mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Loša praksa: Fotografije i PDF fajlovi</h3>
+                        <ul class="space-y-3.5 text-gray-400 text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-red-500 font-bold text-base mt-0.5">✕</span>
+                                <span><strong>Frustrirajuće zumiranje:</strong> Na ekranu telefona tekst je presitna, mutan i teško čitljiv.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-red-500 font-bold text-base mt-0.5">✕</span>
+                                <span><strong>Nevidljivo za Google:</strong> Pretraživač ne može pročitati ponudu sa slike. Vaš "najbolji burger" je za Google samo skup piksela.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-red-500 font-bold text-base mt-0.5">✕</span>
+                                <span><strong>Komplikovane izmjene:</strong> Svaka promjena cijene zahtijeva novo štampanje, slikanje i ponovni upload.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-800/40 text-red-400/80 text-xs font-semibold">
+                        Gubitak i do 30% potencijalnih posjetilaca sa Google Maps-a.
+                    </div>
+                </div>
+
+                <!-- Good Practice Card -->
+                <div class="bg-gradient-to-br from-brand-950/20 to-darkcard rounded-2xl border border-emerald-500/20 p-8 flex flex-col justify-between hover:border-emerald-500/40 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/5 blur-3xl rounded-full"></div>
+                    <div>
+                        <div class="bg-emerald-500/10 p-3 rounded-xl w-fit text-emerald-400 mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Rješenje: cjenovnik.digital cjenovnici</h3>
+                        <ul class="space-y-3.5 text-gray-400 text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-emerald-400 font-bold text-base mt-0.5">✓</span>
+                                <span><strong>Ultra brzi i responsivni:</strong> Meni se učitava u milisekundi, u potpunosti prilagođen svakom mobilnom ekranu.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-emerald-400 font-bold text-base mt-0.5">✓</span>
+                                <span><strong>Snažan Lokalni SEO:</strong> Google čita svaki naziv artikla i cijenu. Kada neko traži specifičnu uslugu u vašem gradu, vi se pojavljujete na vrhu.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-emerald-400 font-bold text-base mt-0.5">✓</span>
+                                <span><strong>Jednostavnost jedne adrese:</strong> Stalni link na vašoj sopstvenoj domeni (npr. <i>rustiqe.online</i>) koji lako dijelite svuda.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-800/40 text-emerald-400 text-xs font-semibold">
+                        Garantovan bolji plasman na lokalnim Google pretragama.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Rezultati nakon prelaska na digitalni cjenovnik (Growth System Positioning) -->
+    <section class="py-20 border-t border-gray-900/60 relative overflow-hidden bg-gradient-to-b from-darkbg via-brand-950/10 to-darkbg">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-80 bg-brand-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 px-3 py-1.5 rounded-full border border-brand-500/20">Sistem za lokalni rast</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Rezultati nakon prelaska na naš digitalni cjenovnik</h2>
+                <p class="text-gray-400 mt-4 text-base">Naš sistem ne mijenja samo izgled vašeg cjenovnika – on dramatično ubrzava rast vašeg lokalnog poslovanja i optimizuje vaš online nastup.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stat 1 -->
+                <div class="bg-darkcard/80 border border-gray-800/80 rounded-2xl p-6 text-center hover:border-brand-500/30 transition duration-300 relative group">
+                    <div class="text-4xl sm:text-5xl font-black text-brand-400 mb-2 group-hover:scale-105 transition-transform">+63%</div>
+                    <h4 class="text-base font-bold text-white mb-1">Više klikova na profil</h4>
+                    <p class="text-xs text-gray-500">Povećana interakcija i posjeta korisnika sa Google mapa direktno na vaš meni.</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="bg-darkcard/80 border border-gray-800/80 rounded-2xl p-6 text-center hover:border-brand-500/30 transition duration-300 relative group">
+                    <div class="text-4xl sm:text-5xl font-black text-emerald-400 mb-2 group-hover:scale-105 transition-transform">+41%</div>
+                    <h4 class="text-base font-bold text-white mb-1">Više telefonskih poziva</h4>
+                    <p class="text-xs text-gray-500">Direktni upiti, rezervacije stolova i dogovori za termine neposredno nakon otvaranja cjenovnika.</p>
+                </div>
+                <!-- Stat 3 -->
+                <div class="bg-darkcard/80 border border-gray-800/80 rounded-2xl p-6 text-center hover:border-brand-500/30 transition duration-300 relative group">
+                    <div class="text-4xl sm:text-5xl font-black text-indigo-400 mb-2 group-hover:scale-105 transition-transform">+2.1x</div>
+                    <h4 class="text-base font-bold text-white mb-1">Više prikaza na Maps-u</h4>
+                    <p class="text-xs text-gray-500">Google vas bolje rangira u lokalnim pretragama jer posjedujete brz i čitljiv sajt.</p>
+                </div>
+                <!-- Stat 4 -->
+                <div class="bg-darkcard/80 border border-gray-800/80 rounded-2xl p-6 text-center hover:border-brand-500/30 transition duration-300 relative group">
+                    <div class="text-4xl sm:text-5xl font-black text-purple-400 mb-2 group-hover:scale-105 transition-transform">120+</div>
+                    <h4 class="text-base font-bold text-white mb-1">Indeksiranih artikala</h4>
+                    <p class="text-xs text-gray-500">Sva vaša jela, pića ili usluge postaju pretražive tekstualne ključne riječi na Google-u.</p>
+                </div>
+            </div>
+
+            <!-- Disclaimer explaining early estimates -->
+            <div class="mt-8 text-center">
+                <span class="text-[11px] text-gray-600 bg-gray-950/40 px-4 py-2 rounded-full border border-gray-900">
+                    * Podaci predstavljaju rane procjene i testne rezultate aktivnih korisničkih profila (early estimates/test data).
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Search Examples (Lokalni Biznis Mindset Activation) -->
+    <section class="py-20 bg-darkbg border-t border-gray-900/60 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left column description -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="text-brand-400 text-sm font-bold tracking-wider uppercase">Šta ljudi zapravo pretražuju?</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                        Vaša ponuda je nevidljiva na pretragama. <br>
+                        <span class="gradient-text py-1">Vrijeme je da to promijenimo.</span>
+                    </h2>
+                    <p class="text-gray-400 text-base leading-relaxed">
+                        Kada potencijalni klijenti u vašem gradu pretražuju hranu ili usluge, Google skenira tekstualne podatke. Ako je vaš cjenovnik samo slika ili PDF, vaša ponuda za Google praktično ne postoji. 
+                    </p>
+                    <p class="text-base font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4">
+                        💡 Uz naš sistem, svaka pizza, kafa, frizura ili masaža postaje čitljiva. Kada klijent traži – Google sada može pronaći VAŠU ponudu!
+                    </p>
+                </div>
+
+                <!-- Right column simulated search examples -->
+                <div class="lg:col-span-6 space-y-4">
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Primjeri realnih lokalnih pretraga:</h4>
+                    
+                    <!-- Search pill 1 -->
+                    <div class="bg-darkcard border border-gray-800 rounded-xl p-4 flex items-center justify-between hover:border-brand-500/40 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-500 text-sm font-mono">1.</span>
+                            <div>
+                                <div class="text-xs text-gray-500">Pretraga kupca:</div>
+                                <div class="text-sm font-bold text-white">"pizza doboj"</div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded font-semibold">Pronađeno odmah ✓</span>
+                    </div>
+
+                    <!-- Search pill 2 -->
+                    <div class="bg-darkcard border border-gray-800 rounded-xl p-4 flex items-center justify-between hover:border-brand-500/40 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-500 text-sm font-mono">2.</span>
+                            <div>
+                                <div class="text-xs text-gray-500">Pretraga kupca:</div>
+                                <div class="text-sm font-bold text-white">"espresso doboj"</div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded font-semibold">Pronađeno odmah ✓</span>
+                    </div>
+
+                    <!-- Search pill 3 -->
+                    <div class="bg-darkcard border border-gray-800 rounded-xl p-4 flex items-center justify-between hover:border-brand-500/40 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-500 text-sm font-mono">3.</span>
+                            <div>
+                                <div class="text-xs text-gray-500">Pretraga kupca:</div>
+                                <div class="text-sm font-bold text-white">"burger banja luka"</div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded font-semibold">Pronađeno odmah ✓</span>
+                    </div>
+
+                    <!-- Search pill 4 -->
+                    <div class="bg-darkcard border border-gray-800 rounded-xl p-4 flex items-center justify-between hover:border-brand-500/40 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-500 text-sm font-mono">4.</span>
+                            <div>
+                                <div class="text-xs text-gray-500">Pretraga kupca:</div>
+                                <div class="text-sm font-bold text-white">"frizerski salon doboj"</div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded font-semibold">Pronađeno odmah ✓</span>
+                    </div>
+
+                    <!-- Search pill 5 -->
+                    <div class="bg-darkcard border border-gray-800 rounded-xl p-4 flex items-center justify-between hover:border-brand-500/40 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-500 text-sm font-mono">5.</span>
+                            <div>
+                                <div class="text-xs text-gray-500">Pretraga kupca:</div>
+                                <div class="text-sm font-bold text-white">"najbolji cevapi"</div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded font-semibold">Pronađeno odmah ✓</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO & Business Impact Explanation Section -->
+    <section class="py-20 relative overflow-hidden bg-darkbg/50 border-t border-gray-900/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- SEO Explanation Visual / Card -->
+                <div class="space-y-6 lg:pr-8">
+                    <div class="text-brand-400 text-sm font-bold tracking-wider uppercase">Uticaj na pretragu i SEO</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">Kako vaš cjenovnik zapravo donosi nove klijente?</h2>
+                    
+                    <div class="space-y-6 text-gray-400 text-base">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 bg-brand-500/10 p-2.5 rounded-lg h-11 w-11 flex items-center justify-center text-brand-400">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Indeksiranje ključnih riječi</h4>
+                                <p class="mt-1 text-sm">Ako vodite kozmetički salon i nudite "lasersku epilaciju", taj pojam mora postojati u vidu čistog tekstualnog koda. Google skenira vašu `cjenovnik.digital` poddomenu ili domenu i automatski indeksira taj pojam.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 bg-emerald-500/10 p-2.5 rounded-lg h-11 w-11 flex items-center justify-center text-emerald-400">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Lokalni SEO autoritet</h4>
+                                <p class="mt-1 text-sm">Google izuzetno cijeni kada vaša vizit karta na mapama (Google Business Profile) vodi na brzu, modernu i HTTPS zaštićenu stranicu sa stvarnom ponudom. To podiže rejting cijelog vašeg biznisa na mapi.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 bg-indigo-500/10 p-2.5 rounded-lg h-11 w-11 flex items-center justify-center text-indigo-400">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Veća stopa konverzije klijenta</h4>
+                                <p class="mt-1 text-sm">Gosti brže donose odluku. Ako na mapi uoče pregledan cjenovnik koji se otvara momentalno, šansa da vas posjete ili rezervišu termin raste za preko 42%.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulation Search Engine Card -->
+                <div class="bg-darkcard border border-gray-800 rounded-2xl p-6 sm:p-8 relative">
+                    <div class="absolute -top-6 -left-6 bg-indigo-600/10 border border-indigo-500/20 px-4 py-2 rounded-xl text-xs font-semibold text-indigo-400">
+                        Interaktivni prikaz
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-white mb-6">Kako to vidi Google?</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Simulated Google Search Input -->
+                        <div class="bg-gray-950 px-4 py-3 rounded-xl border border-gray-800 flex items-center gap-3">
+                            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            <span class="text-xs text-gray-300">najbolji steak restorani u blizini</span>
+                        </div>
+
+                        <!-- Simulated Search Result -->
+                        <div class="bg-gray-950/50 p-4 rounded-xl border border-gray-900 space-y-2">
+                            <div class="text-[10px] text-emerald-400 flex items-center gap-1">
+                                <span>https://rustiqe.online</span>
+                                <span class="text-gray-600">•</span>
+                                <span class="text-gray-500">Google Business Profile</span>
+                            </div>
+                            <h4 class="text-sm font-semibold text-brand-400 hover:underline cursor-pointer">Rustiqe Restaurant &amp; Steak House - Doboj</h4>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                ...Uživajte u vrhunskoj pripremi. Naš <strong class="text-white">teleći odrezak Rustiqe</strong> po cijeni od 18.50 KM priprema se po tradicionalnoj recepturi... Saznajte kompletan asortiman na našem digitalnom cjenovniku.
+                            </p>
+                        </div>
+
+                        <!-- Google Crawl Analysis representation -->
+                        <div class="mt-6 pt-6 border-t border-gray-800 space-y-2">
+                            <span class="text-xs font-bold text-gray-400 block uppercase tracking-wider">Status Analize saobraćaja:</span>
+                            <div class="grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-gray-950 p-2.5 rounded-lg border border-gray-900">
+                                    <div class="text-xs text-emerald-400 font-bold">100/100</div>
+                                    <div class="text-[10px] text-gray-500 mt-1">SEO Brzina</div>
+                                </div>
+                                <div class="bg-gray-950 p-2.5 rounded-lg border border-gray-900">
+                                    <div class="text-xs text-emerald-400 font-bold">98%</div>
+                                    <div class="text-[10px] text-gray-500 mt-1">Čitljivost</div>
+                                </div>
+                                <div class="bg-gray-950 p-2.5 rounded-lg border border-gray-900">
+                                    <div class="text-xs text-emerald-400 font-bold">+2.4x</div>
+                                    <div class="text-[10px] text-gray-500 mt-1">Pozicija</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Domain Strategy Builder -->
+    <section class="py-20 bg-darkbg border-t border-b border-gray-900/60 relative">
+        <div class="absolute inset-0 bg-brand-950/5 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 px-3 py-1.5 rounded-full border border-brand-500/20">Interaktivni Alat</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Koji tip domene je idealan za vas?</h2>
+                <p class="text-gray-400 mt-3 text-base">Unesite informacije o svom biznisu i pogledajte koji tip strategije najbolje odgovara vašem rastu.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-darkcard rounded-3xl border border-gray-800 p-6 sm:p-10 shadow-2xl">
+                <!-- Inputs grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Naziv vašeg biznisa</label>
+                        <input type="text" id="sim-biz-name" value="Bella Vista" placeholder="npr. Bella Vista" class="w-full bg-gray-950 border border-gray-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-3 text-sm text-white transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Vaš Grad / Lokacija</label>
+                        <input type="text" id="sim-biz-city" value="Doboj" placeholder="npr. Sarajevo" class="w-full bg-gray-950 border border-gray-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-3 text-sm text-white transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Tip Biznisa</label>
+                        <select id="sim-biz-type" class="w-full bg-gray-950 border border-gray-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-3 text-sm text-white transition">
+                            <option value="restoran">Restoran / Picerija</option>
+                            <option value="salon">Kozmetički ili Frizerski Salon</option>
+                            <option value="bar">Caffe Bar / Pub</option>
+                            <option value="dental">Stomatologija / Ordinacija</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center mb-8">
+                    <button onclick="generateDomainSuggestions()" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-darkbg font-bold transition duration-150 active:scale-95 text-sm">
+                        Generišite idealne prijedloge domena
+                    </button>
+                </div>
+
+                <!-- Simulation Output -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <!-- Option Brand -->
+                    <div class="bg-gray-950 p-6 rounded-2xl border border-gray-900 hover:border-brand-500/30 transition duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs font-bold uppercase tracking-wider">Brand Orijentacija</span>
+                            <span class="text-xs text-gray-500">Izgradnja imena</span>
+                        </div>
+                        <div class="text-sm sm:text-lg font-mono font-bold text-white mb-2 break-all" id="brand-domain-output">bellavista.online</div>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Fokusira se isključivo na ime vašeg biznisa. Idealno za cjenovnike koji se dijele preko društvenih mreža, štampanih QR kodova u lokalu i brendiranje.
+                        </p>
+                        <div class="text-xs text-emerald-400 font-medium">✓ Najbolje za: Restorane sa već izgrađenom reputacijom.</div>
+                    </div>
+
+                    <!-- Option SEO -->
+                    <div class="bg-gray-950 p-6 rounded-2xl border border-gray-900 hover:border-emerald-500/30 transition duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider">SEO Orijentacija</span>
+                            <span class="text-xs text-gray-500">Lovac na nove klijente</span>
+                        </div>
+                        <div class="text-sm sm:text-lg font-mono font-bold text-white mb-2 break-all" id="seo-domain-output">restoranbellavistadoboj.com</div>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Fokusira se na ključne riječi koje ljudi aktivno kucaju u Google pretraživač u vašem gradu. Izuzetno brzo podiže poziciju na mapi.
+                        </p>
+                        <div class="text-xs text-emerald-400 font-medium">✓ Najbolje za: Novi klijente koji vas nikada prije nisu čuli.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Showcase (Our Portfolio / proof-of-concept) -->
+    <section id="klijenti" class="py-20 relative overflow-hidden bg-darkbg/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-400">Naš dokazani koncept</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Pogledajte primjere iz stvarnog svijeta</h2>
+                <p class="text-gray-400 mt-4 text-base">Već smo pomogli brojnim biznisima da transformišu svoj digitalni nastup. Kliknite na linkove i uvjerite se u brzinu i profesionalnost.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- namastewien.com -->
+                <div class="bg-darkcard rounded-2xl border border-gray-800/80 p-6 flex flex-col justify-between hover:scale-[1.02] transition duration-300">
+                    <div>
+                        <div class="text-xs text-brand-400 font-semibold mb-2">Indijski Restoran</div>
+                        <h4 class="text-xl font-bold text-white mb-2">namastewien.com</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Premium digitalni meni za poznati indijski restoran u Beču. Omogućava gostima brzi pregled tradicionalnih jela i pića bez potrebe za preuzimanjem teških PDF fajlova.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <span class="text-xs text-emerald-400">SEO Optimizovano</span>
+                        <a href="https://namastewien.com" target="_blank" class="text-xs text-brand-400 font-bold hover:underline flex items-center gap-1">
+                            Posjeti sajt
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- caffebardoboj.com -->
+                <div class="bg-darkcard rounded-2xl border border-gray-800/80 p-6 flex flex-col justify-between hover:scale-[1.02] transition duration-300">
+                    <div>
+                        <div class="text-xs text-brand-400 font-semibold mb-2">Ugostiteljstvo</div>
+                        <h4 class="text-xl font-bold text-white mb-2">caffebardoboj.com</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Cjelokupna vinska karta i ponuda pića integrisana na Google profil lokala u Doboju. Olakšava gostima pretragu direktno sa ulica.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <span class="text-xs text-emerald-400">Lokalni SEO Fokus</span>
+                        <a href="https://caffebardoboj.com" target="_blank" class="text-xs text-brand-400 font-bold hover:underline flex items-center gap-1">
+                            Posjeti sajt
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- rustiqe.online -->
+                <div class="bg-darkcard rounded-2xl border border-gray-800/80 p-6 flex flex-col justify-between hover:scale-[1.02] transition duration-300">
+                    <div>
+                        <div class="text-xs text-brand-400 font-semibold mb-2">Restoran / Grill</div>
+                        <h4 class="text-xl font-bold text-white mb-2">rustiqe.online</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Kompletan jelovnik na sopstvenoj brzi domeni za restoran u Doboju. Sve vrste jela i njihove varijacije su indeksirane na Google i prilagođene mobilnim uređajima.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <span class="text-xs text-emerald-400">Brand Orijentisan</span>
+                        <a href="https://rustiqe.online" target="_blank" class="text-xs text-brand-400 font-bold hover:underline flex items-center gap-1">
+                            Posjeti sajt
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- restorandoboj.com -->
+                <div class="bg-darkcard rounded-2xl border border-gray-800/80 p-6 flex flex-col justify-between hover:scale-[1.02] transition duration-300">
+                    <div>
+                        <div class="text-xs text-brand-400 font-semibold mb-2">Restoran / Doboj</div>
+                        <h4 class="text-xl font-bold text-white mb-2">restorandoboj.com</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            SEO-orijentisan primjer za restoran u Doboju: brza domena, jasan digitalni meni i lokalne ključne riječi koje pomažu gostima da ponudu pronađu direktno preko Google pretrage.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <span class="text-xs text-emerald-400">Aktivan primjer</span>
+                        <a href="https://restorandoboj.com" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-400 font-bold hover:underline flex items-center gap-1">
+                            Posjeti sajt
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works (3 Easy Steps) -->
+    <section id="kako" class="py-20 border-t border-gray-900/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-400">Jednostavan proces</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Vaš digitalni cjenovnik u 3 koraka</h2>
+                <p class="text-gray-400 mt-4 text-base">Cjelokupan proces izrade je maksimalno pojednostavljen kako ne bismo trošili vaše dragocjeno vrijeme.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+                <!-- Step 1 -->
+                <div class="bg-darkcard border border-gray-800 rounded-2xl p-8 relative">
+                    <div class="absolute -top-5 left-8 bg-brand-600 text-white font-black rounded-xl h-10 w-10 flex items-center justify-center text-lg shadow-lg">1</div>
+                    <h3 class="text-xl font-bold text-white mt-4 mb-3">Fotografišite i pošaljite</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Sako slikajte vaš postojeći papirni cjenovnik ili nam pošaljite PDF. Naš tim stručnjaka će se pobrinuti za digitalni unos, formatiranje i stilizovanje u bojama vašeg brenda.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-darkcard border border-gray-800 rounded-2xl p-8 relative">
+                    <div class="absolute -top-5 left-8 bg-brand-600 text-white font-black rounded-xl h-10 w-10 flex items-center justify-center text-lg shadow-lg">2</div>
+                    <h3 class="text-xl font-bold text-white mt-4 mb-3">Odaberite idealnu domenu</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Odlučite se za SEO orijentaciju (npr. <i>frizerskisalonsarajevo.com</i>) za maksimalni doseg ili BRAND orijentaciju (npr. <i>bellavista.digital</i>) za jačanje prepoznatljivosti imena.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-darkcard border border-gray-800 rounded-2xl p-8 relative">
+                    <div class="absolute -top-5 left-8 bg-emerald-500 text-darkbg font-black rounded-xl h-10 w-10 flex items-center justify-center text-lg shadow-lg">3</div>
+                    <h3 class="text-xl font-bold text-white mt-4 mb-3">Povezivanje i objava</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        U roku od 48 sati mi završavamo kompletan cjenovnik, instaliramo SSL certifikat, postavljamo cjenovnik na siguran cloud hosting i ugrađujemo link direktno na vaš Google Business profil.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Pricing & Package Configurator (Upsells) -->
+    <section id="cijene" class="py-20 bg-darkbg border-t border-gray-900/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Transparentan obračun</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Jednostavna cijena, bez skrivenih pretplata</h2>
+                <p class="text-gray-400 mt-4 text-base">Osnovna izrada i lansiranje digitalnog cjenovnika je fiksna i jednokratna, a nudimo vam i dodatne booster usluge za maksimalne rezultate.</p>
+            </div>
+
+            <!-- Pricing Configurator Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-5xl mx-auto">
+                
+                <!-- Package details list -->
+                <div class="lg:col-span-7 bg-darkcard rounded-3xl border border-gray-800 p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Šta sve ulazi u osnovni paket?</h3>
+                        <p class="text-xs text-gray-400 mb-6">Sve što je potrebno za kompletan digitalni start i trajnu prisutnost na webu.</p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-300">
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-emerald-400">✓</span>
+                                <div>
+                                    <h5 class="font-bold text-white">Kompletna izrada</h5>
+                                    <p class="text-xs text-gray-500">Unos do 150 stavki cjenovnika sa vaših slika.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-emerald-400">✓</span>
+                                <div>
+                                    <h5 class="font-bold text-white">Brzi i sigurni hosting</h5>
+                                    <p class="text-xs text-gray-500">Prva godina hostinga je potpuno besplatna.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-emerald-400">✓</span>
+                                <div>
+                                    <h5 class="font-bold text-white">Domena po izboru</h5>
+                                    <p class="text-xs text-gray-500">Registracija BRAND ili SEO domene.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-emerald-400">✓</span>
+                                <div>
+                                    <h5 class="font-bold text-white">SSL (HTTPS) Certifikat</h5>
+                                    <p class="text-xs text-gray-500">Zeleni katanac i maksimalna sigurnost.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-emerald-400">✓</span>
+                                <div>
+                                    <h5 class="font-bold text-white">Google Maps povezivanje</h5>
+                                    <p class="text-xs text-gray-500">Integracija linka na vaš Google profil.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-emerald-400">✓</span>
+                                <div>
+                                    <h5 class="font-bold text-white">Samo produženje domene</h5>
+                                    <p class="text-xs text-gray-500">Nakon godinu dana plaćate samo obnovu domene.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Addon Toggles -->
+                        <div class="mt-8 pt-8 border-t border-gray-800 space-y-4">
+                            <h4 class="text-sm font-bold text-gray-300 uppercase tracking-wider mb-2">Opcionalne dodatne usluge:</h4>
+                            
+                            <!-- Addon 1 -->
+                            <label class="flex items-center justify-between p-3.5 rounded-xl bg-gray-950 border border-gray-900 cursor-pointer hover:border-brand-500/50 transition">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="addon-gbp" onchange="updatePriceCalculator()" class="rounded text-brand-600 focus:ring-brand-500 h-4.5 w-4.5 bg-gray-900 border-gray-800">
+                                    <div>
+                                        <div class="text-sm font-bold text-white">Optimizacija Google Business Profila</div>
+                                        <div class="text-[11px] text-gray-500">Sređivanje opisa, kategorija, fotografija na vašoj mapi.</div>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-bold text-brand-400">+ €99</span>
+                            </label>
+
+                            <!-- Addon 2 -->
+                            <label class="flex items-center justify-between p-3.5 rounded-xl bg-gray-950 border border-gray-900 cursor-pointer hover:border-brand-500/50 transition">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="addon-nfc" onchange="updatePriceCalculator()" class="rounded text-brand-600 focus:ring-brand-500 h-4.5 w-4.5 bg-gray-900 border-gray-800">
+                                    <div>
+                                        <div class="text-sm font-bold text-white">NFC &amp; QR Oprema (QuickStar)</div>
+                                        <div class="text-[11px] text-gray-500">Fizički stalci za stolove i kartice za brzo otvaranje cjenovnika.</div>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-bold text-brand-400">+ €49</span>
+                            </label>
+
+                            <!-- Addon 3 -->
+                            <label class="flex items-center justify-between p-3.5 rounded-xl bg-gray-950 border border-gray-900 cursor-pointer hover:border-brand-500/50 transition">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="addon-app" onchange="updatePriceCalculator()" class="rounded text-brand-600 focus:ring-brand-500 h-4.5 w-4.5 bg-gray-900 border-gray-800">
+                                    <div>
+                                        <div class="text-sm font-bold text-white">Namjenski moduli po želji</div>
+                                        <div class="text-[11px] text-gray-500">Dodavanje sistema za online rezervacije ili zakazivanje.</div>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-bold text-brand-400">+ €149</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Price Card -->
+                <div class="lg:col-span-5 bg-gradient-to-b from-brand-900/40 to-darkcard rounded-3xl border-2 border-brand-500 p-8 flex flex-col justify-between text-center relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-emerald-500 text-darkbg text-[10px] font-bold px-2 py-0.5 rounded-md uppercase">Najbolji izbor</div>
+                    
+                    <div>
+                        <span class="text-sm font-semibold uppercase tracking-wider text-brand-400 block mb-2">Ukupni trošak</span>
+                        
+                        <!-- Main big price display -->
+                        <div class="my-6">
+                            <span class="text-5xl font-black text-white" id="live-total-price">€199</span>
+                            <span class="text-xs text-gray-400 block mt-2">Jednokratno plaćanje. Bez ugovorne obaveze.</span>
+                        </div>
+
+                        <div class="space-y-3.5 py-6 border-t border-b border-gray-800 text-left text-xs text-gray-400">
+                            <div class="flex justify-between">
+                                <span>Osnovni paket izrade:</span>
+                                <span class="font-bold text-white">€199</span>
+                            </div>
+                            <div class="flex justify-between text-brand-400 hidden" id="itemized-gbp">
+                                <span>+ Google Business Optimizacija:</span>
+                                <span class="font-bold">€99</span>
+                            </div>
+                            <div class="flex justify-between text-brand-400 hidden" id="itemized-nfc">
+                                <span>+ NFC &amp; QR Oprema:</span>
+                                <span class="font-bold">€49</span>
+                            </div>
+                            <div class="flex justify-between text-brand-400 hidden" id="itemized-app">
+                                <span>+ Namjenski moduli:</span>
+                                <span class="font-bold">€149</span>
+                            </div>
+                        </div>
+
+                        <!-- Partner QuickStar referral info -->
+                        <div class="text-[10px] text-gray-500 mt-4 text-left leading-relaxed">
+                            💡 NFC i QR oprema (kartice, stalci, ploče) se dostavlja u saradnji sa našim partnerom <a href="https://quickstar.store/" target="_blank" class="text-brand-400 underline">QuickStar.store</a>.
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#narudzba" onclick="populateFormFromCalculator()" class="block w-full text-center py-4 rounded-xl text-sm font-bold text-darkbg bg-emerald-400 hover:bg-emerald-300 transition duration-150 shadow-lg shadow-emerald-500/10">
+                            Nastavite sa narudžbom
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead/Order Form Section -->
+    <section id="narudzba" class="py-20 relative overflow-hidden bg-darkbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left instructions copy -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-400">Pošaljite zahtjev</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Spremni za lansiranje cjenovnika?</h2>
+                    <p class="text-gray-400 text-base leading-relaxed">
+                        Ispunite formu ispod, a fotografiju vašeg trenutnog menija ili PDF dokument nam pošaljite nakon uspostavljanja kontakta. Naš tim će vas kontaktirati u roku od nekoliko sati radi dogovora oko izbora idealne domene.
+                    </p>
+                    
+                    <div class="p-4 bg-gray-900/40 rounded-xl border border-gray-800 text-xs text-gray-400 space-y-2">
+                        <p class="font-semibold text-white">Šta se dešava nakon slanja forme?</p>
+                        <ol class="list-decimal list-inside space-y-1">
+                            <li>Vaši podaci se automatski bilježe (Google Sheets).</li>
+                            <li>Analiziramo vaše potrebe i spremamo prijedloge domena.</li>
+                            <li>Kontaktiramo vas za preuzimanje fotografija cjenovnika.</li>
+                        </ol>
+                    </div>
+
+                    <!-- NEW: Free Google Profile SEO analysis box (Strategic Upsell & Consultation positioning) -->
+                    <div class="p-5 bg-gradient-to-r from-brand-900/30 to-indigo-950/30 rounded-2xl border border-brand-500/30 shadow-lg space-y-3 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-24 h-24 bg-brand-500/10 blur-xl rounded-full"></div>
+                        <div class="flex items-center gap-2">
+                            <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+                            <span class="text-xs font-black uppercase tracking-widest text-emerald-400">ISTAKNUTO / BESPLATNO</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Besplatna analiza vašeg Google profila</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Slanje ovog zahtjeva je <strong>potpuno besplatno i neobavezujuće</strong>. Vaša prijava služi kao preliminarni upit. Nakon što zaprimimo podatke, naš tim će uraditi <strong>detaljnu SEO analizu</strong> vašeg postojećeg Google Business profila kako bismo utvrdili tačne tačke rasta. 
+                        </p>
+                        <p class="text-[11px] text-brand-300 font-medium leading-relaxed">
+                            💡 Tek nakon inicijalnih konsultacija, zajedničke analize i uplate, zvanično kreće realizacija i kompletna izrada vašeg digitalnog cjenovnika.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Form container -->
+                <div class="lg:col-span-7 bg-darkcard border border-gray-800 rounded-3xl p-6 sm:p-10 relative">
+                    
+                    <!-- Hidden iframe to handle Google Forms redirect in the background (Maintains premium UX) -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                    <!-- Form target is linked to the hidden iframe. Method must be POST. -->
+                    <form id="orderForm" 
+                          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1geZmjbgd4cRfIqFgCwTher25IHDn1l-Pn7LSazREInZR6Q/formResponse" 
+                          method="POST" 
+                          target="hidden_iframe" 
+                          onsubmit="handleFormSubmit(event)" 
+                          class="space-y-6">
+                        
+                        <!-- Skrivena polja za dodatne usluge i ukupnu cijenu (Automatski se popunjavaju kroz JS) -->
+                        <input type="hidden" id="form-addon-gbp" name="entry.2083816494" value="Ne">
+                        <input type="hidden" id="form-addon-nfc" name="entry.221252908" value="Ne">
+                        <input type="hidden" id="form-addon-app" name="entry.1951972473" value="Ne">
+                        <input type="hidden" id="form-total-price-hidden" name="entry.456203027" value="€199">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Ime i Prezime vlasnika</label>
+                                <input type="text" id="form-name" name="entry.2140186513" required class="w-full bg-gray-950 border border-gray-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-3 text-sm text-white transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Naziv vašeg Biznisa</label>
+                                <input type="text" id="form-biz-name" name="entry.333097936" required class="w-full bg-gray-950 border border-gray-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-3 text-sm text-white transition">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Kontakt Telefon (Viber/WhatsApp)</label>
+                                <input type="tel" id="form-phone" name="entry.835090888" required class="w-full bg-gray-950 border border-gray-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-3 text-sm text-white transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">E-mail adresa</label>
+                                <input type="email" id="form-email" name="entry.1025400076" required class="w-full bg-gray-950 border border-gray-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-3 text-sm text-white transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Odabrana Orijentacija Domene</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-gray-950 border border-gray-800 cursor-pointer">
+                                    <input type="radio" name="entry.1322180315" value="Brand Orijentacija" checked class="text-brand-500 focus:ring-brand-500">
+                                    <span class="text-xs text-white">Brand Orijentacija</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-gray-950 border border-gray-800 cursor-pointer">
+                                    <input type="radio" name="entry.1322180315" value="SEO Orijentacija" class="text-brand-500 focus:ring-brand-500">
+                                    <span class="text-xs text-white">SEO Orijentacija</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Drag and Drop image box mockup (Info workaround) -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Fotografija cjenovnika ili PDF</label>
+                            <div class="border-2 border-dashed border-gray-800/80 rounded-2xl p-5 text-center bg-gray-950/60 text-xs text-gray-400">
+                                <svg class="w-6 h-6 mx-auto text-gray-600 mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 10.742l4.757-2.378a3 3 0 000-5.364L8.684.622A3 3 0 004 3.305v3.136c0 .874.382 1.701 1.041 2.261l3.643 3.04z"></path></svg>
+                                <span class="text-xs text-gray-300 font-medium block">Slike nam šaljete direktno na Viber ili WhatsApp</span>
+                                <span class="text-[10px] text-gray-500 block mt-1">Nakon što primimo vašu prijavu, otvorićemo namjenski chat za lakši prenos slika.</span>
+                            </div>
+                        </div>
+
+                        <!-- Configured additions summary text inside the form -->
+                        <div class="p-4 bg-brand-500/5 rounded-xl border border-brand-500/10 text-xs text-gray-300 flex justify-between items-center">
+                            <span>Izabrano za izradu sa dodacima. Procijenjena cijena:</span>
+                            <span class="font-bold text-white text-sm" id="form-total-display">€199</span>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl text-sm font-bold text-white bg-brand-600 hover:bg-brand-500 active:scale-98 transition duration-150 shadow-xl shadow-brand-500/20">
+                            Pošaljite zahtjev za izradu i besplatnu analizu
+                        </button>
+                    </form>
+
+                    <!-- Custom Custom Toast Notification Modal (Success / Error) -->
+                    <div id="toast" class="absolute inset-0 bg-darkcard/95 rounded-3xl p-8 flex flex-col justify-center items-center text-center hidden z-20">
+                        <div class="bg-emerald-500/10 p-4 rounded-full text-emerald-400 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Zahtjev uspješno poslat!</h3>
+                        <p class="text-sm text-gray-400 max-w-sm mb-6">Uspješno smo zaprimili vaš zahtjev za izradu i besplatnu analizu u našoj Google Sheets bazi. Naš tim stručnjaka će vas kontaktirati na navedeni broj telefona ili e-mail u roku od 2 sata.</p>
+                        <button onclick="closeToast()" class="px-6 py-2.5 rounded-xl bg-gray-900 border border-gray-800 hover:bg-gray-800 text-xs font-bold text-white transition">
+                            Zatvori prozor
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-darkbg border-t border-gray-900/60 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-400">Česta pitanja</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Sve što vas zanima</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-darkcard border border-gray-800 rounded-xl overflow-hidden transition duration-150">
+                    <button class="w-full text-left p-5 flex items-center justify-between font-bold text-white text-base hover:bg-gray-900/40" onclick="toggleFAQ(this)">
+                        <span>Da li stvarno nemam nikakvih mjesečnih troškova?</span>
+                        <span class="text-brand-400 text-xl font-bold transition-transform">+</span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="p-5 text-sm text-gray-400 border-t border-gray-800/60 leading-relaxed">
+                            Da, cijena od €199 je jednokratna. U nju su uključeni izrada, SSL certifikat, instalacija, te prva godina hostinga i registracije domene. Nakon prve godine plaćate isključivo standardnu godišnju obnovu domene (obično iznosi oko €15-€25 zavisno od ekstenzije).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-darkcard border border-gray-800 rounded-xl overflow-hidden transition duration-150">
+                    <button class="w-full text-left p-5 flex items-center justify-between font-bold text-white text-base hover:bg-gray-900/40" onclick="toggleFAQ(this)">
+                        <span>Kako se unose izmjene u cjenovnik u budućnosti?</span>
+                        <span class="text-brand-400 text-xl font-bold transition-transform">+</span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="p-5 text-sm text-gray-400 border-t border-gray-800/60 leading-relaxed">
+                            Mi nemamo komplikovanih CMS sistema koje morate sami učiti koristiti. Za svaku izmjenu, dovoljno je da nam fotografišete izmjene na papiru ili pošaljete u pisanoj formi (Viber/WhatsApp). Svaka pojedinačna izmjena cijena ili artikala se naplaćuje €20 jednokratno. U toku jedne godine možete napraviti neograničen broj izmjena kako se vaša ponuda i cijene budu mijenjale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-darkcard border border-gray-800 rounded-xl overflow-hidden transition duration-150">
+                    <button class="w-full text-left p-5 flex items-center justify-between font-bold text-white text-base hover:bg-gray-900/40" onclick="toggleFAQ(this)">
+                        <span>Šta ako već posjedujem registriranu domenu?</span>
+                        <span class="text-brand-400 text-xl font-bold transition-transform">+</span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="p-5 text-sm text-gray-400 border-t border-gray-800/60 leading-relaxed">
+                            Nikakav problem. Možemo konfigurisati vaš novi digitalni cjenovnik na poddomenu (npr. <i>meni.vasbrend.com</i>) ili preusmjeriti vašu postojeću domenu na naš brzi cloud hosting server.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-darkcard border border-gray-800 rounded-xl overflow-hidden transition duration-150">
+                    <button class="w-full text-left p-5 flex items-center justify-between font-bold text-white text-base hover:bg-900/40" onclick="toggleFAQ(this)">
+                        <span>Kako vršite integraciju na Google Business profil?</span>
+                        <span class="text-brand-400 text-xl font-bold transition-transform">+</span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="p-5 text-sm text-gray-400 border-t border-gray-800/60 leading-relaxed">
+                            Ukoliko nam omogućite pristup, naš tim će ugraditi link direktno u polje "Meni" ili "Sajt" na vašem Google profilu. Alternativno, poslaćemo vam precizno video uputstvo kako to da uradite sami za manje od 2 minuta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <div class="bg-gradient-to-tr from-brand-600 to-emerald-500 p-2 rounded-lg text-white">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-base font-extrabold text-white">cjenovnik.digital</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-gray-500">
+                    <a href="#zasto" class="hover:text-gray-300 transition-colors">Zašto?</a>
+                    <a href="#kako" class="hover:text-gray-300 transition-colors">Proces</a>
+                    <a href="#cijene" class="hover:text-gray-300 transition-colors">Cjenovnik</a>
+                    <a href="https://quickstar.store/" target="_blank" class="hover:text-gray-300 transition-colors">QuickStar Oprema</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-900 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-[11px] text-gray-600">&copy; 2026 cjenovnik.digital. Sva prava zadržana. Dio QuickStar mreže.</p>
+                <p class="text-[11px] text-gray-600">Svi navedeni primjeri poput namastewien.com, caffebardoboj.com i rustiqe.online su u vlasništvu njihovih cijenjenih vlasnika.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripting -->
+    <script>
+        // Set submit listener flag
+        let submitted = false;
+
+        // Form Success Toast Handler (Triggered when hidden iframe completes loading)
+        function handleFormSuccess() {
+            if (submitted) {
+                document.getElementById('toast').classList.remove('hidden');
+                document.getElementById('orderForm').reset();
+                // Reset custom checkboxes and prices
+                document.getElementById('addon-gbp').checked = false;
+                document.getElementById('addon-nfc').checked = false;
+                document.getElementById('addon-app').checked = false;
+                updatePriceCalculator();
+                submitted = false; // Reset state
+            }
+        }
+
+        // Interactive Domain Suggestions generator logic
+        function generateDomainSuggestions() {
+            const bizName = document.getElementById('sim-biz-name').value.trim() || 'Bella Vista';
+            const city = document.getElementById('sim-biz-city').value.trim() || 'Doboj';
+            const bizType = document.getElementById('sim-biz-type').value;
+
+            // Normalize strings to create domains
+            const cleanBiz = bizName.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const cleanCity = city.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+            let seoDomain = '';
+            let brandDomain = `${cleanBiz}.online`;
+
+            switch(bizType) {
+                case 'restoran':
+                    seoDomain = `restoran${cleanBiz}${cleanCity}.com`;
+                    break;
+                case 'salon':
+                    seoDomain = `kozmetickisalon${cleanBiz}${cleanCity}.com`;
+                    break;
+                case 'bar':
+                    seoDomain = `caffebar${cleanBiz}${cleanCity}.com`;
+                    break;
+                case 'dental':
+                    seoDomain = `stomatolog${cleanBiz}${cleanCity}.com`;
+                    break;
+                default:
+                    seoDomain = `${cleanBiz}${cleanCity}.com`;
+            }
+
+            document.getElementById('brand-domain-output').innerText = brandDomain;
+            document.getElementById('seo-domain-output').innerText = seoDomain;
+        }
+
+        // Pricing Calculator Logic
+        let currentTotalPrice = 199;
+
+        // Update total dynamic price across calculation card and lead form
+        function updatePriceCalculator() {
+            let base = 199;
+            const hasGbp = document.getElementById('addon-gbp').checked;
+            const hasNfc = document.getElementById('addon-nfc').checked;
+            const hasApp = document.getElementById('addon-app').checked;
+
+            const itemGbp = document.getElementById('itemized-gbp');
+            const itemNfc = document.getElementById('itemized-nfc');
+            const itemApp = document.getElementById('itemized-app');
+
+            // Update hidden inputs for Google Form submission
+            document.getElementById('form-addon-gbp').value = hasGbp ? "Da" : "Ne";
+            document.getElementById('form-addon-nfc').value = hasNfc ? "Da" : "Ne";
+            document.getElementById('form-addon-app').value = hasApp ? "Da" : "Ne";
+
+            if (hasGbp) {
+                base += 99;
+                itemGbp.classList.remove('hidden');
+            } else {
+                itemGbp.classList.add('hidden');
+            }
+
+            if (hasNfc) {
+                base += 49;
+                itemNfc.classList.remove('hidden');
+            } else {
+                itemNfc.classList.add('hidden');
+            }
+
+            if (hasApp) {
+                base += 149;
+                itemApp.classList.remove('hidden');
+            } else {
+                itemApp.classList.add('hidden');
+            }
+
+            currentTotalPrice = base;
+            document.getElementById('live-total-price').innerText = `€${base}`;
+            document.getElementById('form-total-display').innerText = `€${base}`;
+            document.getElementById('form-total-price-hidden').value = `€${base}`;
+        }
+
+        // Auto scroll to form and transfer dynamic calculated values
+        function populateFormFromCalculator() {
+            document.getElementById('form-total-display').innerText = `€${currentTotalPrice}`;
+            document.getElementById('form-total-price-hidden').value = `€${currentTotalPrice}`;
+            const bizNameSim = document.getElementById('sim-biz-name').value;
+            if (bizNameSim) {
+                document.getElementById('form-biz-name').value = bizNameSim;
+            }
+        }
+
+        // Custom Form submit helper (Handles native validations before setting state)
+        function handleFormSubmit(event) {
+            const name = document.getElementById('form-name').value;
+            const email = document.getElementById('form-email').value;
+            const bizName = document.getElementById('form-biz-name').value;
+
+            if (name && email && bizName) {
+                // Validation passed, allow the submission through the background iframe
+                submitted = true;
+            } else {
+                event.preventDefault();
+            }
+        }
+
+        // Close custom modal and reset
+        function closeToast() {
+            document.getElementById('toast').classList.add('hidden');
+        }
+
+        // FAQ accordion toggle mechanics
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('span:last-child');
+            
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.innerText = '+';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // close all other FAQs first for clean experience
+                const allFaqs = document.querySelectorAll('#faq .max-h-0, #faq div[style*="max-height"]');
+                allFaqs.forEach(faq => {
+                    faq.style.maxHeight = '0px';
+                    const prevBtn = faq.previousElementSibling;
+                    if (prevBtn) {
+                        const prevIcon = prevBtn.querySelector('span:last-child');
+                        if (prevIcon) {
+                            prevIcon.innerText = '+';
+                            prevIcon.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                });
+
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.innerText = '−';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Run initial generator on load to have values on screen and bind iframe
+        window.onload = function() {
+            generateDomainSuggestions();
+
+            // Bind hidden iframe load event dynamically to prevent early inline onload ReferenceErrors
+            const iframe = document.getElementById('hidden_iframe');
+            if (iframe) {
+                iframe.addEventListener('load', function() {
+                    if (submitted) {
+                        handleFormSuccess();
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

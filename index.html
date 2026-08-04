@@ -136,25 +136,6 @@ h1 em{font-style:normal;color:var(--blue)}
 .hero-note{font-size:.9rem;color:var(--ink-soft);margin-bottom:30px;max-width:520px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 
-.hero-visual{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-.hero-signature{
-  width:80%;
-  max-width:420px;
-  margin:28px auto 0;
-  text-align:center;
-  font-family:'Unbounded',sans-serif;
-  font-size:clamp(1.35rem,2.45vw,2.15rem);
-  line-height:1.05;
-  letter-spacing:-.035em;
-  font-weight:900;
-  color:var(--ink);
-}
-.hero-signature span{color:var(--blue)}
-
 /* hero menu card */
 .menucard{
   background:var(--card);
@@ -496,39 +477,36 @@ footer{padding:44px 0;border-top:2px dotted var(--dot)}
     </div>
 
     <!-- demo menu card -->
-    <div class="hero-visual">
-      <div class="menucard reveal" aria-hidden="true">
-        <span class="sticker mc-badge">DEMO · UŽIVO</span>
-        <div class="mc-head">
-          <div class="mc-name">RUSTIQE Restaurant</div>
-          <div class="mc-loc">Kralja Petra I · Doboj</div>
-        </div>
-        <div class="mc-cat">Glavna jela</div>
-        <div class="prow"><span class="pname">Teleći odrezak Rustiqe</span><span class="lead"></span><span class="pval">18.50 KM</span></div>
-        <p class="pdesc">Mladi krompirići, sos od gljiva, ruzmarin</p>
-        <div class="prow"><span class="pname">Domaća pasta Carbonara</span><span class="lead"></span><span class="pval">12.00 KM</span></div>
-        <p class="pdesc">Pančeta, žumanjak, parmezan, svježi biber</p>
-        <div class="mc-cat">Pića</div>
-        <div class="prow"><span class="pname">Domaći sok od maline</span><span class="lead"></span><span class="pval">4.50 KM</span></div>
-        <p class="pdesc">100% prirodni plodovi sa domaćeg uzgoja</p>
-        <div class="mc-qr">
-          <svg width="58" height="58" viewBox="0 0 58 58" role="img" aria-label="QR kod">
-            <rect width="58" height="58" rx="6" fill="#17181C"/>
-            <g fill="#FAFAF7">
-              <rect x="8" y="8" width="14" height="14" rx="2"/><rect x="11.5" y="11.5" width="7" height="7" fill="#17181C"/>
-              <rect x="36" y="8" width="14" height="14" rx="2"/><rect x="39.5" y="11.5" width="7" height="7" fill="#17181C"/>
-              <rect x="8" y="36" width="14" height="14" rx="2"/><rect x="11.5" y="39.5" width="7" height="7" fill="#17181C"/>
-              <rect x="27" y="10" width="4" height="4"/><rect x="27" y="18" width="4" height="4"/>
-              <rect x="10" y="27" width="4" height="4"/><rect x="18" y="27" width="4" height="4"/>
-              <rect x="27" y="27" width="4" height="4"/><rect x="35" y="27" width="4" height="4"/><rect x="43" y="27" width="4" height="4"/>
-              <rect x="27" y="35" width="4" height="4"/><rect x="35" y="35" width="4" height="4"/><rect x="44" y="36" width="6" height="6"/>
-              <rect x="27" y="44" width="4" height="4"/><rect x="36" y="46" width="4" height="4"/>
-            </g>
-          </svg>
-          <p>Skenirajte za pregled cjelokupnog cjenovnika. Otvara se u milisekundi, bez aplikacija i bez PDF-a.</p>
-        </div>
+    <div class="menucard reveal" aria-hidden="true">
+      <span class="sticker mc-badge">DEMO · UŽIVO</span>
+      <div class="mc-head">
+        <div class="mc-name">RUSTIQE Restaurant</div>
+        <div class="mc-loc">Kralja Petra I · Doboj</div>
       </div>
-      <div class="hero-signature" aria-label="cjenovnik.digital potpis">cjenovnik<span>.digital</span></div>
+      <div class="mc-cat">Glavna jela</div>
+      <div class="prow"><span class="pname">Teleći odrezak Rustiqe</span><span class="lead"></span><span class="pval">18.50 KM</span></div>
+      <p class="pdesc">Mladi krompirići, sos od gljiva, ruzmarin</p>
+      <div class="prow"><span class="pname">Domaća pasta Carbonara</span><span class="lead"></span><span class="pval">12.00 KM</span></div>
+      <p class="pdesc">Pančeta, žumanjak, parmezan, svježi biber</p>
+      <div class="mc-cat">Pića</div>
+      <div class="prow"><span class="pname">Domaći sok od maline</span><span class="lead"></span><span class="pval">4.50 KM</span></div>
+      <p class="pdesc">100% prirodni plodovi sa domaćeg uzgoja</p>
+      <div class="mc-qr">
+        <svg width="58" height="58" viewBox="0 0 58 58" role="img" aria-label="QR kod">
+          <rect width="58" height="58" rx="6" fill="#17181C"/>
+          <g fill="#FAFAF7">
+            <rect x="8" y="8" width="14" height="14" rx="2"/><rect x="11.5" y="11.5" width="7" height="7" fill="#17181C"/>
+            <rect x="36" y="8" width="14" height="14" rx="2"/><rect x="39.5" y="11.5" width="7" height="7" fill="#17181C"/>
+            <rect x="8" y="36" width="14" height="14" rx="2"/><rect x="11.5" y="39.5" width="7" height="7" fill="#17181C"/>
+            <rect x="27" y="10" width="4" height="4"/><rect x="27" y="18" width="4" height="4"/>
+            <rect x="10" y="27" width="4" height="4"/><rect x="18" y="27" width="4" height="4"/>
+            <rect x="27" y="27" width="4" height="4"/><rect x="35" y="27" width="4" height="4"/><rect x="43" y="27" width="4" height="4"/>
+            <rect x="27" y="35" width="4" height="4"/><rect x="35" y="35" width="4" height="4"/><rect x="44" y="36" width="6" height="6"/>
+            <rect x="27" y="44" width="4" height="4"/><rect x="36" y="46" width="4" height="4"/>
+          </g>
+        </svg>
+        <p>Skenirajte za pregled cjelokupnog cjenovnika. Otvara se u milisekundi, bez aplikacija i bez PDF-a.</p>
+      </div>
     </div>
   </div>
 </section>

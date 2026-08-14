@@ -132,7 +132,15 @@ h1 em{font-style:normal;color:var(--blue)}
   margin-top:16px;padding-top:14px;
   font-family:'Unbounded',sans-serif;font-weight:700;font-size:1.05rem;
 }
-.hero-total .pval{font-size:1.15rem}
+.hero-total .pval{font-size:1.15rem;display:inline-flex;align-items:baseline;gap:10px}
+.hero-total .pval s{color:var(--ink-soft);opacity:.7;font-size:.92rem;text-decoration:line-through;font-family:'JetBrains Mono',monospace}
+.hero-promo{margin-top:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-promo .countdown{
+  font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.35rem;
+  color:var(--red);background:rgba(192,57,43,.1);
+  padding:6px 14px;border-radius:10px;border:2px solid var(--red);
+}
+.hero-promo .promo-text{font-size:.92rem;color:var(--ink);font-weight:600;max-width:320px;line-height:1.4}
 .hero-note{font-size:.9rem;color:var(--ink-soft);margin-bottom:30px;max-width:520px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 
@@ -472,8 +480,13 @@ footer{padding:44px 0;border-top:2px dotted var(--dot)}
         <li class="prow"><span class="pname">SEO digitalni cjenovnik na vlastitoj domeni</span><span class="lead"></span><span class="pval">uključeno</span></li>
         <li class="prow"><span class="pname">Dizajnirani QR kod, spreman za štampu</span><span class="lead"></span><span class="pval">uključeno</span></li>
         <li class="prow"><span class="pname">Komercijalni song vašeg lokala</span><span class="lead"></span><span class="pval">uključeno</span></li>
-        <li class="prow hero-total"><span class="pname">Sve navedeno, jednokratno</span><span class="lead"></span><span class="pval">€249</span></li>
+        <li class="prow hero-total"><span class="pname">Sve navedeno, jednokratno</span><span class="lead"></span><span class="pval"><s>€499</s> €249</span></li>
       </ul>
+
+      <div class="hero-promo">
+        <span class="countdown" id="promoCountdown">10 dana</span>
+        <span class="promo-text">Akcija je u toku, poručite uz popust od €250.</span>
+      </div>
 
       <p class="hero-note">Bez mjesečnih pretplata i ugovornih obaveza. Nakon prve godine plaćate <strong>samo godišnju obnovu domene</strong> (≈ €15–25). Izrada za 48 sati.</p>
 
@@ -487,11 +500,11 @@ footer{padding:44px 0;border-top:2px dotted var(--dot)}
     <div class="menucard reveal" aria-hidden="true">
       <span class="sticker mc-badge">DEMO · UŽIVO</span>
       <div class="mc-head">
-        <div class="mc-name">RUSTIQE Restaurant</div>
+        <div class="mc-name">RUSTIQUE Restaurant</div>
         <div class="mc-loc">Kralja Petra I · Doboj</div>
       </div>
       <div class="mc-cat">Glavna jela</div>
-      <div class="prow"><span class="pname">Teleći odrezak Rustiqe</span><span class="lead"></span><span class="pval">18.50 KM</span></div>
+      <div class="prow"><span class="pname">Teleći odrezak Rustique</span><span class="lead"></span><span class="pval">18.50 KM</span></div>
       <p class="pdesc">Mladi krompirići, sos od gljiva, ruzmarin</p>
       <div class="prow"><span class="pname">Domaća pasta Carbonara</span><span class="lead"></span><span class="pval">12.00 KM</span></div>
       <p class="pdesc">Pančeta, žumanjak, parmezan, svježi biber</p>
@@ -954,6 +967,25 @@ googleFormsTarget.addEventListener('load', function(){
   formSubmit.textContent = 'Zahtjev je poslat';
   orderForm.reset();
 });
+
+// Promo countdown: 10 days from page load
+(function(){
+  var el = document.getElementById('promoCountdown');
+  if(!el) return;
+  var end = Date.now() + 10*24*60*60*1000;
+  function pad(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var diff = end - Date.now();
+    if(diff <= 0){ el.textContent = 'Akcija je istekla'; return; }
+    var d = Math.floor(diff/86400000);
+    var h = Math.floor(diff%86400000/3600000);
+    var m = Math.floor(diff%3600000/60000);
+    var s = Math.floor(diff%60000/1000);
+    el.textContent = d + ' dana ' + pad(h) + ':' + pad(m) + ':' + pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
 </script>
 
     <!-- Floating WhatsApp button -->

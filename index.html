@@ -980,20 +980,19 @@ googleFormsTarget.addEventListener('load', function(){
   orderForm.reset();
 });
 
-// Promo countdown: 10 days from page load
+// Promo countdown: 48 hours from page load
 (function(){
   var el = document.getElementById('promoCountdown');
   if(!el) return;
-  var end = Date.now() + 10*24*60*60*1000;
+  var end = Date.now() + 48*60*60*1000;
   function pad(n){return (n<10?'0':'')+n;}
   function tick(){
     var diff = end - Date.now();
     if(diff <= 0){ el.textContent = 'Akcija je istekla'; return; }
-    var d = Math.floor(diff/86400000);
-    var h = Math.floor(diff%86400000/3600000);
+    var h = Math.floor(diff/3600000);
     var m = Math.floor(diff%3600000/60000);
     var s = Math.floor(diff%60000/1000);
-    el.textContent = d + ' dana ' + pad(h) + ':' + pad(m) + ':' + pad(s);
+    el.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
   }
   tick();
   setInterval(tick, 1000);

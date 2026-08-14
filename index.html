@@ -980,40 +980,29 @@ googleFormsTarget.addEventListener('load', function(){
   orderForm.reset();
 });
 
-// Promo countdown: 48 hours from page load
+// Promo countdown: 48h from first visit, persists across refreshes (localStorage)
 (function(){
-  var el = document.getElementById('promoCountdown');
-  if(!el) return;
-  var end = Date.now() + 48*60*60*1000;
+  var KEY = 'cjenovnik_promo_start';
+  var stored = null;
+  try { stored = localStorage.getItem(KEY); } catch(e){}
+  var start = stored ? parseInt(stored, 10) : Date.now();
+  if(!stored){ try { localStorage.setItem(KEY, String(start)); } catch(e){} }
+  var end = start + 48*60*60*1000;
   function pad(n){return (n<10?'0':'')+n;}
-  function tick(){
-    var diff = end - Date.now();
-    if(diff <= 0){ el.textContent = 'Akcija je istekla'; return; }
+  function fmt(diff){
+    if(diff <= 0) return 'Akcija je istekla';
     var h = Math.floor(diff/3600000);
     var m = Math.floor(diff%3600000/60000);
     var s = Math.floor(diff%60000/1000);
-    el.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
+    return pad(h) + ':' + pad(m) + ':' + pad(s);
   }
-  tick();
-  setInterval(tick, 1000);
-})();
-
-// Promo countdown (KOMPLET PAKET): 48 hours from page load
-(function(){
-  var el = document.getElementById('promoCountdown48');
-  if(!el) return;
-  var end = Date.now() + 48*60*60*1000;
-  function pad(n){return (n<10?'0':'')+n;}
-  function tick(){
-    var diff = end - Date.now();
-    if(diff <= 0){ el.textContent = 'Akcija je istekla'; return; }
-    var h = Math.floor(diff/3600000);
-    var m = Math.floor(diff%3600000/60000);
-    var s = Math.floor(diff%60000/1000);
-    el.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
-  }
-  tick();
-  setInterval(tick, 1000);
+  ['promoCountdown','promoCountdown48'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    function tick(){ el.textContent = fmt(end - Date.now()); }
+    tick();
+    setInterval(tick, 1000);
+  });
 })();
 </script>
 

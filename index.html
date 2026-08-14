@@ -312,6 +312,14 @@ h2{
 }
 .pc-total .prow{font-family:'Unbounded',sans-serif;font-weight:700;font-size:1.1rem}
 .pc-total .pval{font-size:1.5rem;color:var(--ink)!important;font-family:'JetBrains Mono',monospace}
+.pc-total .pval s{color:var(--ink-soft);opacity:.7;font-size:1rem;text-decoration:line-through;font-weight:400;margin-left:10px}
+.pc-promo{margin-top:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.pc-promo .countdown{
+  font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.2rem;
+  color:var(--red);background:rgba(192,57,43,.1);
+  padding:6px 14px;border-radius:10px;border:2px solid var(--red);
+}
+.pc-promo .promo-text{font-size:.9rem;color:var(--ink);font-weight:600;max-width:300px;line-height:1.4}
 .pc-after{
   margin-top:14px;font-size:.88rem;color:var(--ink-soft);
 }
@@ -720,8 +728,12 @@ footer{padding:44px 0;border-top:2px dotted var(--dot)}
         <div class="prow"><span class="pname">Puna verzija, žanr po izboru</span><span class="lead"></span><span class="pval">uključeno</span></div>
         <div class="prow"><span class="pname">30s reels verzija</span><span class="lead"></span><span class="pval">uključeno</span></div>
         <div class="pc-total">
-          <div class="prow"><span class="pname">UKUPNO</span><span class="lead"></span><span class="pval">€249</span></div>
+          <div class="prow"><span class="pname">UKUPNO</span><span class="lead"></span><span class="pval">€249 <s>€499</s></span></div>
           <p style="text-align:right;margin-top:4px"><span class="sticker">jednokratno · bez ugovora</span></p>
+          <div class="pc-promo">
+            <span class="countdown" id="promoCountdown48">48 sati</span>
+            <span class="promo-text">Akcija je u toku, poručite uz popust od €250.</span>
+          </div>
         </div>
         <div class="pc-after">
           <div class="prow"><span class="pname">Nakon 12 mjeseci</span><span class="lead"></span><span class="pval">samo domena ≈ €15–25/god</span></div>
@@ -982,6 +994,24 @@ googleFormsTarget.addEventListener('load', function(){
     var m = Math.floor(diff%3600000/60000);
     var s = Math.floor(diff%60000/1000);
     el.textContent = d + ' dana ' + pad(h) + ':' + pad(m) + ':' + pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// Promo countdown (KOMPLET PAKET): 48 hours from page load
+(function(){
+  var el = document.getElementById('promoCountdown48');
+  if(!el) return;
+  var end = Date.now() + 48*60*60*1000;
+  function pad(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var diff = end - Date.now();
+    if(diff <= 0){ el.textContent = 'Akcija je istekla'; return; }
+    var h = Math.floor(diff/3600000);
+    var m = Math.floor(diff%3600000/60000);
+    var s = Math.floor(diff%60000/1000);
+    el.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
   }
   tick();
   setInterval(tick, 1000);
